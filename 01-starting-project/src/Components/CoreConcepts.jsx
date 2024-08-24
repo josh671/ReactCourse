@@ -1,28 +1,13 @@
- 
+import CoreConcept from "./CoreConcept"
+import { CORE_CONCEPTS } from "../data"
 
-// how to use function coreConcepts by passing in props
-// function CoreConcept(props) {
-//   return (
-//     <li>
-//       <img src={props.image} alt={props.title} />
-//       <h3>{props.title}</h3>
-//       <p>{props.description}</p>
-//     </li>
-//   )
-// }
-
-
-
-
-
-// how to use coreConcepts by destructuring first paramater of a function.
-// first paramater is still props 
-export default function CoreConcept({image, title, description}) {
-    return (
-      <li>
-        <img src={image} alt={title} />
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </li>
+export default function CoreConcepts() {
+    return(
+        <section id="core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+            {CORE_CONCEPTS.map((conceptItem) =><CoreConcept key={conceptItem.title} {...conceptItem} />)}
+          </ul>
+        </section>
     )
-  }
+}
