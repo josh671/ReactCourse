@@ -2,11 +2,11 @@ import { useState } from 'react'
 import TabButton from './TabButton'
 import { EXAMPLES } from '../data'
 import Section from './Section'
-import Tabs from './Tabs'
+import Tabs from './Tabs' 
 
 export default function Examples() {
   const [selectedTopic, setSelectedTopic] = useState('')
-
+ 
   function handleSelect(selectedButton) {
     setSelectedTopic(selectedButton)
   }
